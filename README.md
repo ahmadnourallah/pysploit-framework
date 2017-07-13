@@ -12,6 +12,7 @@ the framework designed to run on Gnu/Linux distro only
 the requirement is: 
 * bs4
 * python-tools
+* python3.x
 ### Installing Requirement 
 #### installing bs4
 easily you can install the whole requirement from requirement.txt file by execute this command:
@@ -24,6 +25,8 @@ in debian and her children the package names is python-examples and you can inst
 sudo apt-get install python-examples
 ```
 but in opensuse is called python-demo and in fedora/redhat is called python-tools > in both of them you can also use the packages manager to install the package
+#### installing python3 
+the most of linux distro has python preinstalled but if you have old version you can install it using your packages manager or from the official website https://www.python.org/downloads/
 # Add your module
 we designed this framework to be easy to create your module all what you need is define three dictionarys and two functions :) 
 you can read simple_sample.py file in samples directory for more informations 
