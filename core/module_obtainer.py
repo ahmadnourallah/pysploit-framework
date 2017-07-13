@@ -6,7 +6,7 @@ from imp import reload
 class obtainer(object):
     def obtaining_info(self, module):
         try:
-            self.category = str(module).split('/')[-1-1]
+            self.category = str(module).split('/')[-1+1]
             self.module_name = str(module).split('/')[-1]
             self.module_path = str(getcwd() + '/module/{}.py'.format(module)).split('/')
             self.module_path.remove(self.module_name+'.py')
