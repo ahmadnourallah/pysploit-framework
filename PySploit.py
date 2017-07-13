@@ -3,7 +3,8 @@ from core.banner import Banner
 from sys import argv
 from argparse import ArgumentParser, SUPPRESS
 
-sample = """info = {
+sample = """from core.module_obtainer import obtainer
+info = {
         'author'            :'Creator name',
         'date'              :'Create date',
         'rank'              :'Rank of the module',
