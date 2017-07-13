@@ -8,7 +8,7 @@ info = {
         'rank'              :'Excellent',
         'path'              :'auxiliary/core/pyconverter.py',
         'category'          :'auxiliary',
-        'license'           :'GPL V3',
+        'license'           :'GPL-2.0',
         'description'       :'convert your module from python version 2.x to python version 3\n             easy to work on framework without any problems',
         'references'        :['docs.python.org/2/library/2to3.html']
 }
