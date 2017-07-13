@@ -23,7 +23,7 @@ def completer():
                             # auxiliary modules
                              ,"use auxiliary/gather/ip_gather","use auxiliary/gather/ip_lookup", "use auxiliary/core/pyconverter"
                             # exploit modules
-                             ,"use exploit/handler/pyhandler"])
+                             ])
     readline.set_completer_delims('\t')
     readline.parse_and_bind("tab: complete")
     readline.set_completer(t.listCompleter)
