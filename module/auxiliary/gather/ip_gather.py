@@ -6,7 +6,7 @@ info = {
         'rank'              :'Excellent',
         'path'              :'auxiliary/gather/ip_gather.py',
         'category'          :'auxiliary',
-        'license'           :'GPL V3',
+        'license'           :'GPL-2.0',
         'description'       :'simple module to get ip address from host name',
         'references'        :['docs.python.org/3/library/socket.html#socket.gethostbyname']
 }
