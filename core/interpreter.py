@@ -20,7 +20,7 @@ class interpreter(object):
                 try:
                     if obtainer.obtaining_info(obtainer, self.main_ask[1]):
                         while True:
-                            module_interpreter(self.main_ask[1].split('/')[-1], self.main_ask[1].split('/')[-1-1],self.main_ask[1])
+                            module_interpreter(self.main_ask[1].split('/')[-1], self.main_ask[1].split('/')[-1+1],self.main_ask[1])
                 except IndexError:
                     print('\n' + red('[!]') + green(' You') + ' should enter the module name\n')
             elif self.main_ask[0] == 'restart' or self.main_ask[0] == 'Restart' or self.main_ask[0] == 'RESTART':
