@@ -10,7 +10,7 @@ info = {
         'rank'              :'Good',
         'category'          :'Excellent',
         'path'              :'module/gather/ip_lookup.py',
-        'license'           :'GPL V3',
+        'license'           :'GPL-2.0',
         'description'       :'module to make whois on specific target',
         'references'        :['www.crummy.com/software/BeautifulSoup/bs4/doc/']
 }
