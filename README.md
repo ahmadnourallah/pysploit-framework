@@ -1,4 +1,4 @@
-# pysploit-framework
+# PySploit Framework
 free exploit framework written use python language version 3.3
 <br>
 <img src="http://webscan.esy.es/pysploit.png">
