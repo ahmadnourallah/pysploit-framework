@@ -47,7 +47,7 @@ you can read simple_sample.py file in samples directory for more informations
 * Github Page: <github.com/ahmadnourallah>
 * Email: ahmadnurallah@gmail.com
 # License
-This project is licensed under the GPL-2.0 License - see the LICENSE.md file for details
+This project is licensed under the GPL-2.0 License - see the LICENSE file for details
 # TODO
 * add new module
 * create wiki page for project
