@@ -3,6 +3,15 @@ free exploit framework written use python language version 3.3
 <br><br>
 <img src="http://webscan.esy.es/pysploit.png">
 
+# Features
+* Easy to use
+* Free and open source
+* Organizer
+* Easy to develop it
+* Programmed using on of the most popular programming language
+* Unlimited possibilities to create
+* Durable updates
+
 # Getting Started
 the framework not need many steps to install and start using just follow the next steps
 ## Platform
