@@ -34,8 +34,8 @@ you can read simple_sample.py file in samples directory for more informations
 # Authors
 ### Ahmad Nourallah
 #### Contact with me
-* Facebook Account: fb.com/ahmadnurallah
-* Github Page: github.com/ahmadnourallah
+* Facebook Account: <fb.com/ahmadnurallah>
+* Github Page: <github.com/ahmadnourallah>
 * Email: ahmadnurallah@gmail.com
 # License
 This project is licensed under the GPL-2.0 License - see the LICENSE.md file for details
