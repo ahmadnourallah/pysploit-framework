@@ -36,9 +36,7 @@ def main():
     optional_arguments.add_argument('-c', '--create', dest='filename', required=False, help='create module sample')
     args = parser.parse_args()
     if len(argv) > 1:
-        if args.manuall == True:
-            system('man ls')
-        elif args.filename is not None:
+        if args.filename is not None:
             filename = open(args.filename, 'w')
             filename.write(sample)
 
