@@ -86,11 +86,8 @@ def main():
     parser = ArgumentParser(prog='PySploit',usage='python3 PySploit.py [options]',  add_help=False)
     help_arguments = parser.add_argument_group('help arguments')
     help_arguments.add_argument('-v', '--version', action='version', version="version 1.0")
-<<<<<<< HEAD
     help_arguments.add_argument('-h', '--help', action='help', default=SUPPRESS, help='show this help message and exit.')
-=======
     help_arguments.add_argument('-h', '--help', action='help', default=SUPPRESS, help='Show this help message and exit.')
->>>>>>> d09227afd58226ed6801a3029f468483e56e4ad1
     optional_arguments = parser.add_argument_group('optional arguments')
     optional_arguments.add_argument('-c', '--create', dest='filename', required=False, help='create module sample')
     optional_arguments.add_argument('-u', '--upgrade', required=False, action='store_true',  help='create module sample')
