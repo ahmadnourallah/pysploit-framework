@@ -87,7 +87,6 @@ def main():
     help_arguments = parser.add_argument_group('help arguments')
     help_arguments.add_argument('-v', '--version', action='version', version="version 1.0")
     help_arguments.add_argument('-h', '--help', action='help', default=SUPPRESS, help='show this help message and exit.')
-    help_arguments.add_argument('-h', '--help', action='help', default=SUPPRESS, help='Show this help message and exit.')
     optional_arguments = parser.add_argument_group('optional arguments')
     optional_arguments.add_argument('-c', '--create', dest='filename', required=False, help='create module sample')
     optional_arguments.add_argument('-u', '--upgrade', required=False, action='store_true',  help='create module sample')
