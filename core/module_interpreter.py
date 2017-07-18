@@ -27,7 +27,7 @@ def module_completer():
 
             self.listCompleter = listCompleter
     t = tabCompleter()
-    t.createListCompleter(["set", "exploit", "back", "check", "help", "info", 'banner', 'run', 'exec', 'restart'])
+    t.createListCompleter(["set", "exploit", "back", "check", "help", "info", 'banner', 'run', 'exec'])
     readline.set_completer_delims('\t')
     readline.parse_and_bind("tab: complete")
     readline.set_completer(t.listCompleter)
@@ -99,7 +99,10 @@ class module_interpreter(object):
                 elif self.shell_ask[0] == "Help" or self.shell_ask[0] == "help" or self.shell_ask[0] == "HELP":
                     self.help_message()
                 elif self.shell_ask[0] == 'set' or self.shell_ask[0] == "Set" or self.shell_ask[0] == "SET":
-                    self.command_set_call(self.shell_ask[1], self.shell_ask[2])
+                    try:
+                        self.command_set_call(self.shell_ask[1], self.shell_ask[2])
+                    except IndexError:
+                        print(red('\n[!]') + green(' Invaild') + " syntax you should enter option and new value\n")
                 elif self.shell_ask[0] == 'info' or self.shell_ask[0] == 'Info' or self.shell_ask[0] == 'INFO' or self.shell_ask[0] == 'information' or self.shell_ask[0] == 'Information' or self.shell_ask[0] == 'INFORMATION':
                     self.command_info_call()
                 elif self.shell_ask[0] == 'exploit' or self.shell_ask[0] == 'Exploit' or self.shell_ask[0] == 'EXPLOIT' or self.shell_ask[0] == 'run' or self.shell_ask[0] == 'Run' or self.shell_ask[0] == 'RUN':
@@ -114,11 +117,12 @@ class module_interpreter(object):
                                     print('\n' + green('[#]') + ' end running module\n')
                                 else:
                                     self.exploit()
+
                         else:
                             if self.required['start_required'] == True or self.required['start_required'] == "True" or self.required['start_required'] == "TRUE":
                                 print('\n' + blue('[~]') + ' starting module ...\n')
                                 self.exploit()
-                                print('\n' + green('[#]') + ' end running module\n')
+                                print('\n' + blue('[~]') + ' end running module\n')
                             else:
                                 self.exploit()
 

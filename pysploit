@@ -1,0 +1,24 @@
+.\" Manpage for PySploit Framework
+.\" Contact ahmadnurallah@gmail.com to correct errors or typos.	
+.TH man 8 "08 Jul 2017" "1.0" "PySploit man page"
+.SH NAME
+PySploit - exploit framework
+.SH SYNPOSIS 
+PySploit [options](optional)
+.SH DESCRIPTION
+PySploit framework is free framework for hacker and python programers.
+.SH OPTIONS
+.TP
+.B \-v, \--version
+use to show program version and exit
+.TP
+.B \-h, \--help
+use to show help message and exit
+.TP
+.B \-c, \--create
+use to create module simple in specific path
+.SH BUGS
+if you find any bugs in our software please contact us on the <ahmadnurallah@gmail>
+or open issues in the project issues page https://github.com/ahmadnourallah/pysploit-framework/issues
+.SH AUTHOR
+Ahmad Nourallah (ahmadnurallah@gmail.com)

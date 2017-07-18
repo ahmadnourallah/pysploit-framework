@@ -22,7 +22,6 @@ required = {
 
 def exploit():
     try:
-        print(obtainer.options['path'][2])
         output = check_output('2to3 -w --no-diffs {0} &> /dev/null'.format(obtainer.options['path'][2], shell=True))
     except CalledProcessError:
         print(red('[!]') + green(' Check if you installed 2to3 program and try again'))

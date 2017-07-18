@@ -3,7 +3,24 @@ from utilities.screen_cleaner import clear # import utilites
 from core.main_completer import completer # completer import
 from imp import reload # import reload function from imp module
 from os import system
+from urllib.request import urlopen
+from urllib.error import URLError
+
 class interpreter(object):
+    def check_upgrade(self):
+        try:
+            self.current_version = open('core/version.txt','r').read()
+            self.new_version = urlopen('https://raw.githubusercontent.com/ahmadnourallah/pysploit-framework/master/core/version.txt').read()
+            if float(self.current_version) < float(self.new_version):
+                print(green("\n[~]") + blue(" Congratulations") + " new version avaliable go to 'https://github.com/ahmadnourallah/pysploit-framework to download it :)\n")
+            else:
+                print(red('\n[!]') + green(' You') + " have the latest version\n")
+        except FileNotFoundError:
+            print(red('\n[!]') + green(' Ohhhh,') + ' check if core/version.txt file is exist and try again\n')
+            pass
+        except URLError:
+            print(red('\n[!]') + green(' check') + " your internet connection and try again\n")
+            pass
     def start_interpreter(self):
         completer()
         try:
@@ -34,6 +51,8 @@ class interpreter(object):
                     system(' '.join(self.main_ask))
                 except IndexError:
                     print(red("\n[!] ") + green("Please ") + " enter the command\n")
+            elif self.main_ask[0] == 'upgrade' or self.main_ask[0] == 'Upgrade' or self.main_ask[0] == 'UPGRADE':
+                self.check_upgrade()
             else:
                 print('\n' + red('[!]') + green(' option') + ' not found\n')
         except (KeyboardInterrupt,EOFError):

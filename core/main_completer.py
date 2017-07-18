@@ -18,12 +18,12 @@ def completer():
             self.listCompleter = listCompleter
     t = tabCompleter()
                             # tool command
-    t.createListCompleter(["clear", "use", "exit", "banner","exec","restart"
+    t.createListCompleter(["clear", "use", "exit", "banner","exec","restart", "upgrade"
                             # modules
                             # auxiliary modules
                              ,"use auxiliary/gather/ip_gather","use auxiliary/gather/ip_lookup", "use auxiliary/core/pyconverter"
                             # exploit modules
-                             ])
+                             ,"use exploit/windows/ftp/ftpshell_overflow", "use exploit/android/login/login_bypass"])
     readline.set_completer_delims('\t')
     readline.parse_and_bind("tab: complete")
     readline.set_completer(t.listCompleter)

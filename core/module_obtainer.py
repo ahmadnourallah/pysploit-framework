@@ -8,7 +8,7 @@ class obtainer(object):
         try:
             self.category = str(module).split('/')[-1+1]
             self.module_name = str(module).split('/')[-1]
-            self.module_path = str(getcwd() + '/module/{}.py'.format(module)).split('/')
+            self.module_path = str(getcwd() + '/modules/{}.py'.format(module)).split('/')
             self.module_path.remove(self.module_name+'.py')
             self.module_path = '/'.join(self.module_path)
             path.append(self.module_path)
@@ -35,6 +35,7 @@ class obtainer(object):
             return False
         except SyntaxError:
             print('\n' + red('[!]') + green(' Check') + ' for your syntax and in your module and try again\n')
+
         except ImportError:
             print('\n' + red('[!]') + green(' Module') + ' not found\n')
             return False
