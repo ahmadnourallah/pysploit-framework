@@ -71,10 +71,11 @@ you can read simple_sample.py file in samples directory for more informations
 This project is licensed under the GPL-2.0 License - see the LICENSE file for details
 
 # TODO
-* add new module
-* create wiki page for project
-* create man page for project 
+* add new modules
+* <strike>create wiki page for project</strike>
+* <strike>create man page for project</strike> 
 * make the code smarter
 * attract the developers to using the framework
-* create installer to the project
+* <strike>create installer to the project</strike>
+* create advanced payload (such as meterpreter in metasploit) help us in this task 
 > we always welcome the all pull requests
