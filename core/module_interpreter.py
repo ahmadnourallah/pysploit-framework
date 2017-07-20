@@ -1,7 +1,7 @@
 from __main__ import * # import all stuff in the program namespace
 from utilities.color import * # import colors function
 from core.banner import Banner # import banner
-from utilities import screen_cleaner # import screen cleaner == clear command in unix and unix like system
+from utilities.screen_cleaner import clear # import screen cleaner == clear command in unix and unix like system
 from core.module_obtainer import obtainer # import module_obtainer package
 from imp import reload # import reload function from importlib lib
 import core.interpreter, readline # import main interpreter
