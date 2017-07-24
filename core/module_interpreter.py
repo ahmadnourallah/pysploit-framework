@@ -28,11 +28,8 @@ def module_completer():
 
             self.listCompleter = listCompleter
     t = tabCompleter()
-<<<<<<< HEAD
     t.createListCompleter(["set", "exploit", "back", "check", "help", "info", 'banner', 'run', 'exec', 'clear','search'])
-=======
     t.createListCompleter(["set", "exploit", "back", "check", "help", "info", 'banner', 'run', 'exec','clear'])
->>>>>>> bec4e46061970e58833d21ccdfe8793e5457c876
     readline.set_completer_delims('\t')
     readline.parse_and_bind("tab: complete")
     readline.set_completer(t.listCompleter)
