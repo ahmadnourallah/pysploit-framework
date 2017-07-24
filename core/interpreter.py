@@ -1,4 +1,9 @@
 from utilities.color import * # import utilites
+<<<<<<< HEAD
+=======
+from utilities.screen_cleaner import clear # import utilites
+from core.banner import Banner # import banner
+>>>>>>> bec4e46061970e58833d21ccdfe8793e5457c876
 from core.main_completer import completer # completer import
 import os
 from imp import reload
