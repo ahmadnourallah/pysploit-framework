@@ -18,11 +18,11 @@ class obtainer(object):
 
         try:
             try:
-                module = __import__(self.module_name)
+                self.module = __import__(self.module_name)
             except ValueError:
                 print(red('\n[!]') + green(' Please') + ' enter the full module name\n')
                 return False
-            reload(module)
+            reload(self.module)
             self.exploit = getattr(__import__(self.module_name, fromlist=['exploit']), 'exploit')
             self.options = getattr(__import__(self.module_name, fromlist=['options']), 'options')
             self.info = getattr(__import__(self.module_name, fromlist=['info']), 'info')
@@ -33,11 +33,37 @@ class obtainer(object):
             print('\n' + red('[!]') + green(' You') + ' must define all the requirement\n')
             pass
             return False
-        except SyntaxError:
-            print('\n' + red('[!]') + green(' Check') + ' for your syntax and in your module and try again\n')
+    #    except SyntaxError:
+    #        print('\n' + red('[!]') + green(' Check') + ' for your syntax and in your module and try again\n')
 
         except ImportError:
             print('\n' + red('[!]') + green(' Module') + ' not found\n')
             return False
+        else:
+            return True
+
+
+
+    def description_obtainer(self, module):
+        try:
+            self.category = str(module).split('/')[-1+1]
+            self.module_name = str(module).split('/')[-1]
+            self.module_path = str(getcwd() + '/modules/{}.py'.format(module)).split('/')
+            self.module_path.remove(self.module_name+'.py')
+            self.module_path = '/'.join(self.module_path)
+            path.append(self.module_path)
+            self.info = getattr(__import__(self.module_name, fromlist=['info']), 'info')
+        except Exception:
+            return False
+            pass
+        else:
+            return True
+    def extra_info_obtainer(self,module):
+        reload(self.module)
+        try:
+            self.extra_info = getattr(__import__(self.module_name, fromlist=['extra_info']), 'extra_info')
+        except (AttributeError,ImportError,NameError):
+            return False
+            pass
         else:
             return True

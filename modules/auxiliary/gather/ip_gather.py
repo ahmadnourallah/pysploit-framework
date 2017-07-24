@@ -11,7 +11,7 @@ info = {
         'references'        :['docs.python.org/3/library/socket.html#socket.gethostbyname']
 }
 options = {
-            'target'                :['No', 'use to set target','']
+            'target'                :['Yes', 'use to set target','']
 }
 required = {
         'start_required'     :'True',

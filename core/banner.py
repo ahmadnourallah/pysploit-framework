@@ -44,5 +44,17 @@ class Banner():
             print('     Free exploit framework for pentester and python developer')
             print(green('-') * 75)
             print(white(''))
+        def banner3():
+            print('                      ____        _____       __      _ __')
+            print('                     / __ \__  __/ ___/____  / /___  (_) /_')
+            print('                    / /_/ / / / /\__ \/ __ \/ / __ \/ / __/')
+            print('                   / ____/ /_/ /___/ / /_/ / / /_/ / / /_')
+            print('                  /_/    \__, //____/ .___/_/\____/_/\__/')
+            print('                        /____/     /_/')
+            print('')
+            print(green('-') * 75)
+            print('     Free exploit framework for pentester and python developer')
+            print(green('-') * 75)
+            print(white(''))
 
-        choice([banner1, banner2])()
+        choice([banner1, banner2, banner3])()

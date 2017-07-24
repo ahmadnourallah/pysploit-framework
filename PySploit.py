@@ -2,6 +2,7 @@ from core.interpreter import interpreter
 from core.banner import Banner
 from sys import argv
 from utilities.color import *
+from utilities.files import *
 from argparse import ArgumentParser, SUPPRESS
 from subprocess import check_call, CalledProcessError, call
 import os
@@ -40,15 +41,8 @@ def install():
         print(red("\n[!]") + green(" You") + " should run command as root\n")
         exit()
     try:
-        shutil.copytree('core/','/etc/pysploit-framework/core/')
-        shutil.copytree('files/','/etc/pysploit-framework/files/')
-        shutil.copytree('modules/','/etc/pysploit-framework/modules/')
-        shutil.copytree('samples/','/etc/pysploit-framework/samples/')
-        shutil.copytree('utilities/','/etc/pysploit-framework/utilities/')
-        shutil.copy('PySploit.py', '/etc/pysploit-framework')
-        shutil.copy('README.md', '/etc/pysploit-framework/docs')
-        shutil.copy('LICENSE', '/etc/pysploit-framework/docs')
-        shutil.copy('pysploit', '/etc/pysploit-framework/docs')
+        copy(['PySploit.py','core/','files','modules/','samples/','utilities/'], '/etc/pysploit-framework')
+        copy(['README.md','LICENSE','pysploit'],'/etc/pysploit-framework/docs')
     except FileExistsError:
        print(red("\n[!]") + green(' Check') + " if all tool files exist and try again\n")
        exit()
@@ -71,8 +65,8 @@ def install():
         print(blue('\n[CO]') + green(" Tool") + ' installed successfully type pysploit to run it\n')
 def uninstall():
     try:
-        shutil.rmtree('/etc/pysploit-framework/')
-        os.remove('/bin/pysploit')
+        rm('/etc/pysploit-framework/')
+        rm('/bin/pysploit')
     except PermissionError:
         print(red("\n[!]") + green(" You") + " should run command as root\n")
         exit()
@@ -85,7 +79,7 @@ def uninstall():
 def main():
     parser = ArgumentParser(prog='PySploit',usage='python3 PySploit.py [options]',  add_help=False)
     help_arguments = parser.add_argument_group('help arguments')
-    help_arguments.add_argument('-v', '--version', action='version', version="version 1.0")
+    help_arguments.add_argument('-v', '--version', action='version', version="version 1.2")
     help_arguments.add_argument('-h', '--help', action='help', default=SUPPRESS, help='show this help message and exit.')
     optional_arguments = parser.add_argument_group('optional arguments')
     optional_arguments.add_argument('-c', '--create', dest='filename', required=False, help='create module sample')
@@ -102,7 +96,7 @@ def main():
             interpreter().check_upgrade()
         elif args.manual == True:
             try:
-                check_call('man /etc/pysploit-framework/docs/pysploit &> /dev/null',shell=True)
+                check_call('man /etc/pysploit-framework/docs/pysploit',shell=True)
             except CalledProcessError:
                 print(red('\n[!]') + green(' Tool') + " manual is not installed yet\n")
         elif args.install == True:
