@@ -85,7 +85,7 @@ def uninstall():
 def main():
     parser = ArgumentParser(prog='PySploit',usage='python3 PySploit.py [options]',  add_help=False)
     help_arguments = parser.add_argument_group('help arguments')
-    help_arguments.add_argument('-v', '--version', action='version', version="version 1.0")
+    help_arguments.add_argument('-v', '--version', action='version', version="version 1.1")
     help_arguments.add_argument('-h', '--help', action='help', default=SUPPRESS, help='show this help message and exit.')
     optional_arguments = parser.add_argument_group('optional arguments')
     optional_arguments.add_argument('-c', '--create', dest='filename', required=False, help='create module sample')
