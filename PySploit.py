@@ -53,10 +53,6 @@ def install():
         file = open('/bin/pysploit','w')
         file.write('cd /etc/pysploit-framework &> /dev/null')
         file.write('\npython3 PySploit.py $1 $2 $3 $4')
-    except PermissionError:
-        print(red("\n[!]") + green(" You") + " should run command as root\n")
-        exit()
-    try:
         call('chmod 777 /bin/pysploit', shell=True)
     except PermissionError:
         print(red("\n[!]") + green(" You") + " should run command as root\n")
